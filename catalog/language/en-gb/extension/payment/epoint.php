@@ -1,0 +1,1 @@
+<?php/** * @pluginName epoint Opencart 3.x Payment Gateway * @pluginUrl https://epoint.az/ * @varion 1.0.0 * @author Rauf ABBASZADE <rafo.abbas@gmail.com> * @authorURI: https://abbasazade.dev/ * @opencartVersion "3.0.x" */$_['text_title'] = 'Credit Card / Debit Card (Epoint)';
