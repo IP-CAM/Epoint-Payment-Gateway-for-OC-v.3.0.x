@@ -6,7 +6,7 @@ Epoint integration module version 2.1
 Information about [epoint.az](https://epoint.az) you can find on the website.
 
 ## Requirements
-- [dist/epoint-opencart-3.0.x.ocmod.zip](https://abbaszade.dev/epoint-opencart-3.0.x.ocmod.zip) is tested on v3.0.3.8, v3.0.3.9
+- [epoint-opencart-3.0.x.ocmod.zip](https://abbaszade.dev/epoint-opencart-3.0.x.ocmod.zip) is tested on v3.0.3.8, v3.0.3.9
 
 ## Installation Steps
 1. Download the ZIP File
