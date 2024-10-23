@@ -34,7 +34,7 @@ class Epoint
     public $signature = '';
 
 
-    private function request($url, $data = [])
+    public function request($url, $data = [])
     {
         $POSTFIELDS = http_build_query($data);
         $_ch = curl_init();

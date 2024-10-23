@@ -50,6 +50,7 @@ class ControllerExtensionPaymentEpoint extends Controller
     {
         $this->registerEpoint();
 
+
         $json = [];
 
         if (isset($this->session->data['payment_method']['code']) && $this->session->data['payment_method']['code'] == 'epoint') {
