@@ -37,6 +37,10 @@ $_['entry_total']		 = 'Total';
 
 $_['entry_currency']	 = 'Currency';
 
+$_['entry_currency_usd_convert_azn']	 = 'USD convert to AZN';
+
+$_['entry_currency_eur_convert_azn']	 = 'EUR convert to AZN';
+
 $_['entry_order_status'] = 'Order Status';
 
 $_['entry_status']		 = 'Status';
