@@ -19,8 +19,9 @@ Information about [epoint.az](https://epoint.az) you can find on the website.
 1. Insert your Public key in the "Public key" field.
 2. Insert your Secret key in the "Private key" field.
 3. Set the currency to AZN. (If not listed, it should be added in the System -> Localisation -> Currencies).
-4. Select one of the languages: az, en, or ru.
-5. Set the status to "Enabled"
+4. If the currency is selected as USD or EUR, add the exchange rate index for AZN.
+5. Select one of the languages: az, en, or ru.
+6. Set the status to "Enabled"
 
 
 ## Contributing
