@@ -61,10 +61,18 @@ class ControllerExtensionPaymentEpoint extends Controller
 
             $orderId = $this->order['order_id'];
 
+            $total = $this->order['total'];
+
+            if ($this->config->get('payment_epoint_currency') === 'USD') {
+                $total = $this->order['total'] * $this->config->get('payment_epoint_currency_usd_convert_azn');
+            } elseif ($total === 'EUR') {
+                $total = $this->order['total'] * $this->config->get('payment_epoint_currency_eur_convert_azn');
+            }
+
             $response = $this->epoint->request('1/request', $this->epoint->payload([
                 'public_key' => $this->config->get('payment_epoint_public_key'),
-                'amount' => (float)$this->order['total'],
-                'currency' => $this->config->get('payment_epoint_currency'),
+                'amount' => $total,
+                'currency' => 'AZN',
                 'language' => 'az',
                 'order_id' => $this->order['order_id'],
                 'description' => 'Order payment: ' . str_pad($orderId, 7, "0", STR_PAD_LEFT),
