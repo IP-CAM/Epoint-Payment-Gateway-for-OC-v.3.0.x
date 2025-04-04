@@ -109,6 +109,12 @@ class ControllerExtensionPaymentEpoint extends Controller {
             $this->data['payment_epoint_currency'] = $this->config->get('payment_epoint_currency');
         }
 
+        if (isset($this->request->post['payment_epoint_language'])) {
+            $this->data['payment_epoint_language'] = $this->request->post['payment_epoint_language'];
+        } else {
+            $this->data['payment_epoint_language'] = $this->config->get('payment_epoint_language');
+        }
+
         if (isset($this->request->post['payment_epoint_currency_usd_convert_azn'])) {
             $this->data['payment_epoint_currency_usd_convert_azn'] = $this->request->post['payment_epoint_currency_usd_convert_azn'];
         } else {
@@ -132,6 +138,7 @@ class ControllerExtensionPaymentEpoint extends Controller {
     {
         $this->data = array_merge($this->data, array(
             'error_warning' => isset($this->error['warning']) ? $this->error['warning'] : '',
+            'error_language' => isset($this->error['language']) ? $this->error['language'] : '',
             'error_public_key' => isset($this->error['public_key']) ? $this->error['public_key'] : '',
             'error_private_key' => isset($this->error['private_key']) ? $this->error['private_key'] : '',
             'error_currency' => isset($this->error['currency']) ? $this->error['currency'] : '',
@@ -194,6 +201,9 @@ class ControllerExtensionPaymentEpoint extends Controller {
 
         if (empty($this->request->post['payment_epoint_currency_usd_convert_azn'])) {
             $this->error['currency_usd_convert_azn'] = $this->language->get('error_currency_usd_convert_azn');
+        }
+        if (empty($this->request->post['payment_epoint_language'])) {
+            $this->error['language'] = $this->language->get('error_language');
         }
 
         return empty($this->error);

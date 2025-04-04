@@ -76,6 +76,7 @@
                             {% endif %}
                         </div>
                     </div>
+
                     <div class="form-group required">
                         <label class="col-sm-2 control-label" for="input-security">{{ entry_currency_usd_convert_azn }}</label>
                         <div class="col-sm-10">
@@ -106,6 +107,19 @@
                                     <option value="0" selected="selected">{{ text_disabled }}</option>
                                 {% endif %}
                             </select>
+                        </div>
+                    </div>
+                    <div class="form-group required">
+                        <label class="col-sm-2 control-label" for="input-language">{{ error_language }}</label>
+                        <div class="col-sm-10">
+                            <select name="payment_epoint_language" id="input-language" class="form-control">
+                                <option {% if payment_epoint_language == 'az' %} selected="selected"{% endif %} value="az">AZ</option>
+                                <option {% if payment_epoint_language == 'en' %} selected="selected"{% endif %} value="en">EN</option>
+                                <option {% if payment_epoint_language == 'ru' %} selected="selected"{% endif %} value="ru">RU</option>
+                            </select>
+                            {% if error_language %}
+                                <div class="text-danger">{{ error_language }}</div>
+                            {% endif %}
                         </div>
                     </div>
                     <div class="form-group">

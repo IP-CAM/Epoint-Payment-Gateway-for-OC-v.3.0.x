@@ -37,6 +37,8 @@ $_['entry_total']		 = 'Total';
 
 $_['entry_currency']	 = 'Currency';
 
+$_['entry_language']	 = 'Language';
+
 $_['entry_currency_usd_convert_azn']	 = 'USD convert to AZN';
 
 $_['entry_currency_eur_convert_azn']	 = 'EUR convert to AZN';
@@ -65,6 +67,8 @@ $_['error_public_key']	 = 'Public key Required!';
 $_['error_private_key']	 = 'Private key Required!';
 
 $_['error_security']	 = 'Security Code Required!';
+
+$_['error_language']	 = 'Language Required!';
 
 $_['error_currency']	 = 'Currency Required!';
 
