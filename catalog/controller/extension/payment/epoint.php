@@ -75,7 +75,7 @@ class ControllerExtensionPaymentEpoint extends Controller
                 $language = $this->config->get('payment_epoint_language');
             }
 
-            $response = $this->epoint->request('1/request', $this->epoint->payload([
+            $response = $this->epoint->request('1/payment-request', $this->epoint->payload([
                 'public_key' => $this->config->get('payment_epoint_public_key'),
                 'amount' => $total,
                 'currency' => 'AZN',
